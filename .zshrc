@@ -4,6 +4,8 @@
 
 # Path
 export LANG=ja_JP.UTF-8
+## GOPATH
+export GOPATH=$HOME/.go
 # Use colors
 autoload -Uz colors
 colors
@@ -128,3 +130,6 @@ preexec() {
    if overridden; then return; fi
    printf "\033]0;%s\a" "${1%% *} | $cwd$(gitDirty)" # Omit construct from $1 to show args
 }
+
+# Open google-chrome from terminal
+alias chrome="open -a 'Google Chrome'"
